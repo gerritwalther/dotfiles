@@ -1,0 +1,18 @@
+import XMonad
+import XMonad.Config.Xfce
+import XMonad.Layout.Maximize
+
+import qualified Data.Map        as M
+
+myKeys (XConfig {modMask = modMask}) = M.fromList $
+    [   -- launch a terminal
+        ((modMask,		xK_Return), spawn "xfce4-terminal")
+        -- Maximize the focused window temporarily
+    ,   ((modMask,               xK_m     ), withFocused $ sendMessage . maximizeRestore)
+    ]
+
+main = xmonad xfceConfig
+            {   terminal    = "xfce4-terminal"
+            ,   keys        = myKeys
+            ,   modMask     = mod4Mask
+            }
