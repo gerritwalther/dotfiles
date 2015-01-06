@@ -186,6 +186,16 @@ bar {
 
 # lock screen
 bindsym Control+$mod+l exec sh ~/.i3/i3lock.sh
+
+# change brightness
+bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec /usr/bin/xbacklight -dec 5
+
+# pulse audio volume control
+bindsym XF86AudioLowerVolume exec /usr/bin/pactl set-sink-volume 1 -- '-5%'
+bindsym XF86AudioRaiseVolume exec /usr/bin/pactl set-sink-volume 1 -- '+5%'
+bindsym XF86AudioMute exec /usr/bin/pactl set-sink-volume 1 0
+
 # assign programs to specific workspaces (use "xprop" <<< why?)
 assign [class="^Google-chrome$"] $tag1
 assign [class="^Terminator$"] $tag2
