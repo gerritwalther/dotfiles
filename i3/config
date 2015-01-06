@@ -93,8 +93,13 @@ bindsym $mod+a focus parent
 # Name the workspaces
 set $tag1 "1: www"
 set $tag2 "2: term"
-set $tag3 "3: editor"
-set $tag4 "4: mail"
+set $tag3 "3: ide"
+set $tag4 "4: editor"
+set $tag5 "5: mail"
+set $tag6 "6"
+set $tag7 "7"
+set $tag8 "8: chat"
+set $tag9 "9: music"
 set $tag0 "10: p"
 
 # switch to workspace
@@ -102,11 +107,11 @@ bindsym $mod+1 workspace $tag1
 bindsym $mod+2 workspace $tag2
 bindsym $mod+3 workspace $tag3
 bindsym $mod+4 workspace $tag4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
+bindsym $mod+5 workspace $tag5
+bindsym $mod+6 workspace $tag6
+bindsym $mod+7 workspace $tag7
+bindsym $mod+8 workspace $tag8
+bindsym $mod+9 workspace $tag9
 bindsym $mod+0 workspace $tag0
 
 # move focused container to workspace
@@ -114,11 +119,11 @@ bindsym $mod+Shift+1 move container to workspace $tag1
 bindsym $mod+Shift+2 move container to workspace $tag2
 bindsym $mod+Shift+3 move container to workspace $tag3
 bindsym $mod+Shift+4 move container to workspace $tag4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+5 move container to workspace $tag5
+bindsym $mod+Shift+6 move container to workspace $tag6
+bindsym $mod+Shift+7 move container to workspace $tag7
+bindsym $mod+Shift+8 move container to workspace $tag8
+bindsym $mod+Shift+9 move container to workspace $tag9
 bindsym $mod+Shift+0 move container to workspace $tag0
 
 # reload the configuration file
@@ -181,3 +186,9 @@ bar {
 
 # lock screen
 bindsym Control+$mod+l exec sh ~/.i3/i3lock.sh
+# assign programs to specific workspaces (use "xprop" <<< why?)
+assign [class="^Google-chrome$"] $tag1
+assign [class="^Terminator$"] $tag2
+assign [class="^Skype$"] $tag8
+assign [class="^Pidgin$"] $tag8 
+
