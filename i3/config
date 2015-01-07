@@ -193,9 +193,9 @@ bindsym XF86AudioLowerVolume exec /usr/bin/pactl set-sink-volume 1 -- '-5%'
 bindsym XF86AudioRaiseVolume exec /usr/bin/pactl set-sink-volume 1 -- '+5%'
 bindsym XF86AudioMute exec /usr/bin/pactl set-sink-volume 1 0
 
-# assign programs to specific workspaces (use "xprop" <<< why?)
-assign [class="^Google-chrome$"] $tag1
-assign [class="^Terminator$"] $tag2
+# assign programs to specific workspaces (use "xprop")
+#assign [class="^Google-chrome$"] $tag1
+#assign [class="^Terminator$"] $tag2
 assign [class="^Skype$"] $tag8
 assign [class="^Pidgin$"] $tag8 
 
