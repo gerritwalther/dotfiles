@@ -198,7 +198,7 @@ bindsym XF86AudioMute exec /usr/bin/pactl set-sink-volume 1 0
 #assign [class="^Terminator$"] $tag2
 assign [class="^Skype$"] $tag8
 assign [class="^Pidgin$"] $tag8 
-
+assign [class="^Geany$"] $tag4
 
 # before autostart of programs
 exec ~/.i3/autostart
@@ -206,3 +206,6 @@ exec ~/.i3/autostart
 # startup programs on login
 exec google-chrome
 exec terminator
+exec pidgin
+exec skype
+exec geany
