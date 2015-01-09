@@ -209,3 +209,4 @@ exec terminator
 exec pidgin
 exec skype
 exec geany
+exec nm-applet
