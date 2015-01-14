@@ -5,3 +5,6 @@ pactl set-sink-volume 1 -- '20%' &
 
 ## Set LCD brightness
 xbacklight -set 50 &
+
+## Activate CAPS LOCK as compose key
+xmodmap ~/.Xmodmap &
