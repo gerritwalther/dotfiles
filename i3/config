@@ -183,6 +183,7 @@ bar {
 
 # lock screen
 bindsym Control+$mod+l exec sh ~/.i3/i3lock.sh
+exec ~/.i3/i3autolock.sh
 
 # change brightness
 bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 10
