@@ -8,3 +8,6 @@ xbacklight -set 50 &
 
 ## Activate CAPS LOCK as compose key
 xmodmap ~/.Xmodmap &
+
+## Notification daemon
+dunst &
