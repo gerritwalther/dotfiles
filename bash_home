@@ -1,0 +1,3 @@
+# Add dart editor and executables to PATH
+export PATH=$PATH:$HOME/opt/dart
+export PATH=$PATH:$HOME/opt/dart-sdk/bin
