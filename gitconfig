@@ -1,0 +1,11 @@
+[alias]
+    st = status
+    co = checkout
+    ci = commit
+
+# Add [user] with email and name to the specified file
+[include]
+    path = ~/.gituser
+#[user]
+#    email = <mailadresse>
+#    name = <name>
