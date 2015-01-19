@@ -11,3 +11,6 @@ xmodmap ~/.Xmodmap &
 
 ## Notification daemon
 dunst &
+
+## Setup montiors for work
+xrandr --output VGA1 --auto --left-of eDP1
