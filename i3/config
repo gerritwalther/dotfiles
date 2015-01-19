@@ -182,8 +182,8 @@ bar {
 
 	# i3bar position
 	position top
-	# Using custom i3status.conf
-        status_command i3status -c ~/.i3/i3status.conf
+	# Using custom i3status.conf with py3status
+        status_command py3status -c ~/.i3/i3status.conf -i ~/proj/dotfiles/i3/py3status
 }
 
 # lock screen
