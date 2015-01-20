@@ -195,9 +195,9 @@ bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec /usr/bin/xbacklight -dec 5
 
 # pulse audio volume control
-bindsym XF86AudioLowerVolume exec /usr/bin/pactl set-sink-volume 1 -- '-5%'
-bindsym XF86AudioRaiseVolume exec /usr/bin/pactl set-sink-volume 1 -- '+5%'
-bindsym XF86AudioMute exec /usr/bin/pactl set-sink-volume 1 0
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 5%- unmute
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 5%+ unmute
+bindsym XF86AudioMute exec --no-startup-id amixer -q -D pulse set Master toggle
 
 # assign workspaces to screen
 workspace $tag1 output VGA1

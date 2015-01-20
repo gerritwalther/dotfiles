@@ -1,7 +1,8 @@
 #!/bin/sh
 
 ## Set startup volume
-pactl set-sink-volume 1 -- '20%' &
+amixer -q -D pulse set Master 20% unmute &
+#pactl set-sink-volume 1 -- '20%' &
 
 ## Set LCD brightness
 xbacklight -set 50 &
