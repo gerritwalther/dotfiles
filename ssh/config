@@ -1,6 +1,7 @@
 # Example host with alias, port, username and ssh key
 Host <alias>
-  HostName 192.168.0.1 # Add ip here
+# Add your ip here
+  HostName 192.168.0.1
   Port 1234
   User <username>
   IdentityFile ~/.ssh/<filename>
