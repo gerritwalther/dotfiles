@@ -131,3 +131,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Add bin folder in home path to the PATH variable
+export PATH=$PATH:$HOME/bin
