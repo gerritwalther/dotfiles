@@ -97,9 +97,6 @@ alias ll='ls $LS_OPTIONS -al'
 #alias la='ls $LS_OPTIONS -A'
 #alias l='ls $LS_OPTIONS -CF'
 
-alias ..='cd ..'
-alias ...='cd ../..'
-
 # set default ls options
 export LS_OPTIONS='--color=auto -h'
 
