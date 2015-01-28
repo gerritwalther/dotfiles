@@ -194,7 +194,7 @@ exec ~/.i3/i3autolock.sh
 bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec /usr/bin/xbacklight -dec 5
 
-# pulse audio volume control
+# alsa mixer audio volume control used instead of pulse audio (was not working properly) (https://faq.i3wm.org/question/125/how-to-change-the-systems-volume/?sort=votes&page=1#sort-top)
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 5%- unmute
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 5%+ unmute
 bindsym XF86AudioMute exec --no-startup-id amixer -q -D pulse set Master toggle
