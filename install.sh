@@ -5,7 +5,7 @@
 ## USAGE:       Execute from dotfiles-project directory:
 ##              ./install.sh <options to install>
 
-PWD=$(pwd)
+PWD=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 usage () {
 cat <<EOF
