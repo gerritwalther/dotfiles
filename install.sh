@@ -25,6 +25,7 @@ At least one of the following options is required.
 -i | --i3wm          Installs all i3wm config and script files.
 -s | --ssh           Installs the ssh config files.
 -t | --terminator    Installs the terminator config files.
+-X | --Xmodmap       Installs Xmodmap config file.
 
 EOF
   exit 1
@@ -155,6 +156,14 @@ install_terminator () {
   symlink_with_debug $PWD/config/terminator/config $HOME/.config/terminator/config
 }
 
+install_xmodmap () {
+  if [ ! -h $HOME/.Xmodmap ] ; then
+    backup $HOME/.Xmodmap
+  fi
+
+  symlink_with_debug $PWD/Xmodmap $HOME/.Xmodmap
+}
+
 install_all () {
   install_bash
   install_dunst
@@ -162,10 +171,11 @@ install_all () {
   install_i3
   install_ssh
   install_terminator
+  install_xmodmap
 }
 
 # Got this from http://stackoverflow.com/a/7948533/1004795
-TEMP=`getopt -o vgsib:dtah --long verbose,git,ssh,i3wm,bash:,dunst,terminator,all,help \
+TEMP=`getopt -o vgsib:dtahX --long verbose,git,ssh,i3wm,bash:,dunst,terminator,all,help,Xmodmap \
              -n 'install.sh' -- "$@"`
 
 if [ $? != 0 ] ; then echo "Terminating..." >&2 ; exit 1 ; fi
@@ -184,6 +194,7 @@ I3=false
 SSH=false
 TERMINATOR=false
 VERBOSE=false
+XMODMAP=false
 
 HOST=$(cat "$PWD/host")
 
@@ -198,6 +209,7 @@ while true; do
     -s | --ssh        ) SSH=true; shift ;;
     -t | --terminator ) TERMINATOR=true; shift ;;
     -v | --verbose    ) VERBOSE=true; shift ;;
+    -X | --Xmodmap    ) XMODMAP=true; shift ;;
     -- ) shift; break ;;
     *  ) break ;;
   esac
@@ -225,6 +237,9 @@ if ! $ALL ; then
   fi
   if $TERMINATOR ; then
     install_terminator
+  fi
+  if $XMODMAP ; then
+    install_xmodmap
   fi
 else
   install_all
