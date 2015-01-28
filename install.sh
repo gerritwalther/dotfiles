@@ -23,6 +23,7 @@ At least one of the following options is required.
 -d | --dunst         Installs the dunst config files.
 -g | --git           Installs the git config files.
 -i | --i3wm          Installs all i3wm config and script files.
+-n | --nano          Installs nano config file.
 -s | --ssh           Installs the ssh config files.
 -t | --terminator    Installs the terminator config files.
 -X | --Xmodmap       Installs Xmodmap config file.
@@ -164,18 +165,27 @@ install_xmodmap () {
   symlink_with_debug $PWD/Xmodmap $HOME/.Xmodmap
 }
 
+install_nano () {
+  if [ ! -h $HOME/.nanorc ] ; then
+    backup $HOME/.nanorc
+  fi
+
+  symlink_with_debug $PWD/nanorc $HOME/.nanorc
+}
+
 install_all () {
   install_bash
   install_dunst
   install_git
   install_i3
+  install_nano
   install_ssh
   install_terminator
   install_xmodmap
 }
 
 # Got this from http://stackoverflow.com/a/7948533/1004795
-TEMP=`getopt -o vgsib:dtahX --long verbose,git,ssh,i3wm,bash:,dunst,terminator,all,help,Xmodmap \
+TEMP=`getopt -o ab:dighnstvX --long all,bash:,dunst,i3wm,nano,git,help,ssh,terminator,verbose,Xmodmap \
              -n 'install.sh' -- "$@"`
 
 if [ $? != 0 ] ; then echo "Terminating..." >&2 ; exit 1 ; fi
@@ -191,6 +201,7 @@ BASH=false
 DUNST=false
 GIT=false
 I3=false
+NANO=false
 SSH=false
 TERMINATOR=false
 VERBOSE=false
@@ -206,6 +217,7 @@ while true; do
     -d | --dunst      ) DUNST=true; shift ;;
     -g | --git        ) GIT=true; shift ;;
     -i | --i3wm       ) I3=true; shift ;;
+    -n | --nanorc     ) NANO=true; shift ;;
     -s | --ssh        ) SSH=true; shift ;;
     -t | --terminator ) TERMINATOR=true; shift ;;
     -v | --verbose    ) VERBOSE=true; shift ;;
@@ -220,20 +232,23 @@ if $VERBOSE ; then
 fi
 
 if ! $ALL ; then
-  if $GIT ; then
-    install_git
-  fi
-  if $SSH ; then
-    install_ssh
-  fi
-  if $I3 ; then
-    install_i3
-  fi
   if $BASH ; then
     install_bash
   fi
   if $DUNST ; then
     install_dunst
+  fi
+  if $GIT ; then
+    install_git
+  fi
+  if $I3 ; then
+    install_i3
+  fi
+  if $NANO ; then
+    install_nano
+  fi
+  if $SSH ; then
+    install_ssh
   fi
   if $TERMINATOR ; then
     install_terminator
