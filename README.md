@@ -4,9 +4,20 @@ A place for my configuration files to have them available everywhere. For furthe
 
 I'm using Debian Testing, but most of the stuff should work on all linux systems.
 
+## Requirements
+
+install with `apt-get install`:
+* i3
+* dunst (might be installed along with i3)
+* 
+install with `easy_install`
+* pip
+install with pip
+* py3status
+
 ## Installation
 
-For now you have to link everything yourself.
+You can now use the installation script. See usage of the script.
 
 ### git
 
