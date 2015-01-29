@@ -9,10 +9,11 @@ I'm using Debian Testing, but most of the stuff should work on all linux systems
 install with `apt-get install`:
 * i3
 * dunst (might be installed along with i3)
-* 
-install with `easy_install`
+
+install with `easy_install`:
 * pip
-install with pip
+
+install with `pip install`:
 * py3status
 
 ## Installation
