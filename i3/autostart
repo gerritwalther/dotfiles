@@ -1,11 +1,15 @@
-#!/bin/sh
+#!/bin/bash
+
+HOST=$(cat "$PWD/../host")
 
 ## Set startup volume
 amixer -q -D pulse set Master 20% unmute &
 #pactl set-sink-volume 1 -- '20%' &
 
 ## Set LCD brightness
-xbacklight -set 50 &
+if [ "$HOST" != "home" ] ; then
+  xbacklight -set 50 &
+fi
 
 ## Activate CAPS LOCK as compose key
 xmodmap ~/.Xmodmap &
@@ -14,4 +18,9 @@ xmodmap ~/.Xmodmap &
 dunst &
 
 ## Setup montiors for work
-xrandr --output VGA1 --auto --left-of eDP1
+if [ "$HOST" == "home" ] ; then
+  xrandr --output DVI-1 --auto --left-of HDMI-0 --auto
+  xrandr --output HDMI-0 --auto
+elif [ "$HOST" == "work" ] ; then
+  xrandr --output VGA1 --auto --left-of eDP1
+fi

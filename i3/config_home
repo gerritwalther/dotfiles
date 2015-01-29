@@ -1,0 +1,11 @@
+# assign workspaces to screen
+workspace $tag1 output DVI-1
+workspace $tag2 output DVI-1
+workspace $tag3 output DVI-1
+workspace $tag4 output DVI-1
+workspace $tag5 output DVI-1
+workspace $tag6 output HDMI-0
+workspace $tag7 output HDMI-0
+workspace $tag8 output HDMI-0
+workspace $tag9 output HDMI-0
+workspace $tag0 output HDMI-0

@@ -1,0 +1,11 @@
+# assign workspaces to screen
+workspace $tag1 output VGA1
+workspace $tag2 output VGA1
+workspace $tag3 output VGA1
+workspace $tag4 output VGA1
+workspace $tag5 output eDP1
+workspace $tag6 output VGA1
+workspace $tag7 output eDP1
+workspace $tag8 output eDP1
+workspace $tag9 output eDP1
+workspace $tag0 output eDP1

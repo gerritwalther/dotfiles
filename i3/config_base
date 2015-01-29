@@ -199,18 +199,6 @@ bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 5%- unmut
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 5%+ unmute
 bindsym XF86AudioMute exec --no-startup-id amixer -q -D pulse set Master toggle
 
-# assign workspaces to screen
-workspace $tag1 output VGA1
-workspace $tag2 output VGA1
-workspace $tag3 output VGA1
-workspace $tag4 output VGA1
-workspace $tag5 output eDP1
-workspace $tag6 output VGA1
-workspace $tag7 output eDP1
-workspace $tag8 output eDP1
-workspace $tag9 output eDP1
-workspace $tag0 output eDP1
-
 # assign programs to specific workspaces (use "xprop")
 #assign [class="^Google-chrome$"] $tag1
 #assign [class="^Terminator$"] $tag2
