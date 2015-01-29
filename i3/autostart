@@ -11,6 +11,9 @@ if [ "$HOST" != "home" ] ; then
   xbacklight -set 50 &
 fi
 
+## Set gb as keyboard layout
+setxkbmap gb
+
 ## Activate CAPS LOCK as compose key
 xmodmap ~/.Xmodmap &
 
