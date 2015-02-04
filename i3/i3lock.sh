@@ -4,4 +4,4 @@
 #scrot ~/tmp/deb.png
 #convert ~/tmp/deb.png -blur 2x2 ~/tmp/deb-locked.png
 # -i for a specific image to show, -t to show it on all monitors
-i3lock -i ~/tmp/deb-locked.png -t
+i3lock -i ~/.i3/deb-locked.png -t
