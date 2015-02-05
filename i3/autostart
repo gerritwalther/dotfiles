@@ -36,3 +36,10 @@ if hash numlockx 2>/dev/null; then
 else
   echo "numlockx is required. Please install it."
 fi
+
+## Start dropbox if available
+if hash dropbox 2>/dev/null; then
+  dropbox start &
+else
+  echo "Dropbox is not installed."
+fi
