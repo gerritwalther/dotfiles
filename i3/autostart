@@ -29,3 +29,10 @@ elif [ "$HOST" == "work" ] ; then
   xrandr --output eDP1 --auto --primary
   xrandr --output VGA1 --auto --left-of eDP1
 fi
+
+## Always activate num-lock.
+if hash numlockx 2>/dev/null; then
+  numlockx on
+else
+  echo "numlockx is required. Please install it."
+fi
