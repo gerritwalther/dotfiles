@@ -12,7 +12,6 @@ NOTE: reserved method names:
 
 # import your useful libs here
 from time import time
-from evdev import InputDevice, ecodes
 from subprocess import Popen, PIPE
 import sys
 import re
