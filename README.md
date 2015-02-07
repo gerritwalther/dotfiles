@@ -10,6 +10,7 @@ install with `apt-get install`:
 * i3
 * dunst (might be installed along with i3)
 * numlockx (used by the i3-configs)
+* xautolock (required for autolock)
 
 install with `easy_install`:
 * pip
