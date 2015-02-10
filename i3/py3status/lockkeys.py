@@ -24,7 +24,7 @@ LED_MASKS = [
     ('scroll',  0b0000000100, 'SCROLL', '#2AA198'),
     ('altgr',   0b1111101000,  'ALTGR', '#858900')
   ]
-  
+
 def get_led_statuses():
     ''' Return a list of dictionaries representing the current keyboard LED statuses '''
     try:
@@ -78,37 +78,40 @@ class Py3status:
         {'y': 13, 'x': 1737, 'button': 1, 'name': 'empty', 'instance': 'first'}
         """
         pass
-        
+
     def numLock(self, i3s_output_list, i3s_config):
         response = {'full_text': ''}
-        
-        stati = get_led_statuses()
-        
-        if stati & LED_MASKS[1][1]:
-          response['color'] = i3s_config['color_good']
-        else:
-          response['color'] = i3s_config['color_bad']
-        
-        response['full_text'] = LED_MASKS[1][2]
-        
-        response['cached_until'] = time() + 1
-        
+
+        if self.show_num_status:
+          stati = get_led_statuses()
+
+          if stati & LED_MASKS[1][1]:
+            response['color'] = i3s_config['color_good']
+          else:
+            response['color'] = i3s_config['color_bad']
+
+          response['full_text'] = LED_MASKS[1][2]
+
+          response['cached_until'] = time() + 1
+
+
         return response
 
     def capsLock(self, i3s_output_list, i3s_config):
         response = {'full_text': ''}
-        
-        stati = get_led_statuses()
-        
-        if stati & LED_MASKS[0][1]:
-          response['color'] = i3s_config['color_good']
-        else:
-          response['color'] = i3s_config['color_bad']
-        
-        response['full_text'] = LED_MASKS[0][2]
-        
-        response['cached_until'] = time() + 1
-        
+
+        if self.show_caps_status:
+          stati = get_led_statuses()
+
+          if stati & LED_MASKS[0][1]:
+            response['color'] = i3s_config['color_good']
+          else:
+            response['color'] = i3s_config['color_bad']
+
+          response['full_text'] = LED_MASKS[0][2]
+
+          response['cached_until'] = time() + 1
+
         return response
 
 if __name__ == "__main__":
