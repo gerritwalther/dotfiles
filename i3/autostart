@@ -24,7 +24,7 @@ dunst &
 ## Setup montiors for work
 if [ "$HOST" == "home" ] ; then
   xrandr --output HDMI-0 --auto --primary
-  xrandr --output DVI-1 --auto --left-of HDMI-0 --auto
+  xrandr --output DVI-1 --auto --left-of HDMI-0
 elif [ "$HOST" == "work" ] ; then
   xrandr --output eDP1 --auto --primary
   xrandr --output VGA1 --auto --left-of eDP1
