@@ -1,0 +1,1 @@
+export PATH=$PATH:/opt/Qt5/Tools/QtCreator/bin:/opt/Qt5/5.4/gcc_64/bin
