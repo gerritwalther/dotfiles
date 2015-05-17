@@ -4,6 +4,7 @@ fi
 
 #
 # setup ssh-agent
+# from: http://mah.everybody.org/docs/ssh
 #
 
 
