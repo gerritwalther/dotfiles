@@ -205,6 +205,14 @@ bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 5%- unmut
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 5%+ unmute
 bindsym XF86AudioMute exec --no-startup-id amixer -q -D pulse set Master toggle
 
+# player settings (see https://pbrisbin.com/posts/controlling_mplayer/)
+# create fifo "mkfifo ~/.mplayer/fifo"
+# add that into mplayer config: "input = file=/home/username/.mplayer/fifo"
+bindsym XF86AudioNext exec echo "pt_step 1" > ~/.mplayer/fifo
+bindsym XF86AudioPrev exec echo "seek 0 2" > ~/.mplayer/fifo
+bindsym XF86AudioStop exec echo "seek 0 2" > ~/.mplayer/fifo && echo "pause" > ~/.mplayer/fifo
+bindsym XF86AudioPlay exec ~/.i3/start_pause_mplayer.sh
+
 # assign programs to specific workspaces (use "xprop")
 #assign [class="^Google-chrome$"] $tag1
 #assign [class="^Terminator$"] $tag2
