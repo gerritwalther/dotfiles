@@ -3,9 +3,20 @@ workspace $tag1 output VGA1
 workspace $tag2 output VGA1
 workspace $tag3 output VGA1
 workspace $tag4 output VGA1
-workspace $tag5 output eDP1
-workspace $tag6 output VGA1
+workspace $tag5 output VGA1
+workspace $tag6 output eDP1
 workspace $tag7 output eDP1
 workspace $tag8 output eDP1
 workspace $tag9 output eDP1
 workspace $tag0 output eDP1
+
+workspace $tagF1 output VGA1
+workspace $tagF2 output VGA1
+workspace $tagF3 output VGA1
+workspace $tagF4 output VGA1
+workspace $tagF5 output VGA1
+workspace $tagF6 output eDP1
+workspace $tagF7 output eDP1
+workspace $tagF8 output eDP1
+workspace $tagF9 output eDP1
+workspace $tagF10 output eDP1

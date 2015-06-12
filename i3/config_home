@@ -9,3 +9,14 @@ workspace $tag7 output HDMI-0
 workspace $tag8 output HDMI-0
 workspace $tag9 output HDMI-0
 workspace $tag0 output HDMI-0
+
+workspace $tagF1 output DVI-1
+workspace $tagF2 output DVI-1
+workspace $tagF3 output DVI-1
+workspace $tagF4 output DVI-1
+workspace $tagF5 output DVI-1
+workspace $tagF6 output HDMI-0
+workspace $tagF7 output HDMI-0
+workspace $tagF8 output HDMI-0
+workspace $tagF9 output HDMI-0
+workspace $tagF10 output HDMI-0
