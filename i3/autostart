@@ -12,6 +12,11 @@ if [ "$HOST" != "home" ] ; then
   xbacklight -set 50 &
 fi
 
+## Install dispwin profile for the Eizo monitor @ home
+if [ "$HOST" == "home" ] ; then
+  dispwin -v -d1 -c -I ~/.local/share/dispcalGUI/storage/FS2333\ 2014-12-22\ D6500\ 2.2\ F-S\ 3xCurve+MTX/FS2333\ 2014-12-22\ D6500\ 2.2\ F-S\ 3xCurve+MTX.icc
+fi
+
 ## Set gb as keyboard layout
 setxkbmap gb
 
