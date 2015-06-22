@@ -43,3 +43,10 @@ if hash dropbox 2>/dev/null; then
 else
   echo "Dropbox is not installed."
 fi
+
+## Start workrave if available
+if hash workrave 2>/dev/null; then
+  workrave &
+else
+  echo "Workrave is not installed."
+fi

@@ -252,6 +252,7 @@ bindsym XF86AudioPlay exec ~/.i3/start_pause_mplayer.sh
 assign [class="^Skype$"] $tag8
 assign [class="^Pidgin$"] $tag8
 assign [class="^Geany$"] $tag4
+assign [class="^Workrave$"] $tagF1
 
 # startup programs on login
 exec google-chrome
