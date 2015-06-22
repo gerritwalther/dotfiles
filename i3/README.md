@@ -13,3 +13,8 @@ mkdir ~/.config/dunst
 zcat /usr/share/doc/dunst/dunstrc.example.gz >> ~/.config/dunst/dunstrc
 ```
 Or link to your own dunstrc.
+
+If the notifications don't work, you might need to install the `libnotify-bin` package on Debian:
+```
+# apt-get install libnotify-bin
+```
