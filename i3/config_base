@@ -255,7 +255,7 @@ assign [class="^Geany$"] $tag4
 assign [class="^Workrave$"] $tagF1
 
 # startup programs on login
-exec google-chrome
+exec google-chrome --disable-new-avatar-menu
 exec terminator
 exec pidgin
 exec skype
