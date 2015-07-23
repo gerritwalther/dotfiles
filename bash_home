@@ -3,3 +3,6 @@ export PATH=$PATH:/usr/lib/dart/bin
 
 # Add dart protobuf plugin to PATH
 export PATH=$PATH:$HOME/opt/dart-protoc-plugin/out
+
+# Add cabal packages to PATH
+export PATH=$PATH:$HOME/.cabal/bin
