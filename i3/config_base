@@ -246,6 +246,9 @@ bindsym XF86AudioPrev exec echo "seek 0 2" > ~/.mplayer/fifo
 bindsym XF86AudioStop exec echo "seek 0 2" > ~/.mplayer/fifo && echo "pause" > ~/.mplayer/fifo
 bindsym XF86AudioPlay exec ~/.i3/start_pause_mplayer.sh
 
+# add possibility to switch between UK and DE layout
+exec --no-startup-id "setxkbmap -model pc105 -layout gb,de -option grp:shifts_toggle"
+
 # assign programs to specific workspaces (use "xprop")
 #assign [class="^Google-chrome$"] $tag1
 #assign [class="^Terminator$"] $tag2
