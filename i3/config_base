@@ -216,6 +216,8 @@ bar {
           urgent_workspace    #aa0000 #990000     #ffffff
         }
 
+        font pango:DejaVu Sans Mono, Icons 8
+
         # i3bar position
         position                top
         # mode                  dock/...
