@@ -33,6 +33,7 @@ class Py3status:
     directly from their i3status config.
     """
     show = True
+    format = 'Layout: {layout}'
 
     def __init__(self):
         """
@@ -70,7 +71,9 @@ class Py3status:
           else:
             response['color'] = i3s_config['color_bad']
 
-          response['full_text'] = layout
+          response['full_text'] = self.format.format(
+            layout=layout
+          )
 
           response['cached_until'] = time() + 1
 
