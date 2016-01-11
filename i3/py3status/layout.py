@@ -17,6 +17,7 @@ import re
 import json
 
 LAYOUT_CMD = 'xkblayout-state print "%n"'
+LAYOUT_CHANGE_CMD = 'xkblayout-state set +1'
 
 def get_layout_status():
     ''' Return the currently selected layout '''
@@ -58,7 +59,8 @@ class Py3status:
         Example 'event' json object:
         {'y': 13, 'x': 1737, 'button': 1, 'name': 'empty', 'instance': 'first'}
         """
-        pass
+        Popen(LAYOUT_CHANGE_CMD, stdout=PIPE, shell=True)
+        return
 
     def layout(self, i3s_output_list, i3s_config):
         response = {'full_text': ''}
