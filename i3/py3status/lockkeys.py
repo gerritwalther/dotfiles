@@ -87,13 +87,12 @@ class Py3status:
 
           if stati & LED_MASKS[1][1]:
             response['color'] = i3s_config['color_good']
+            response['full_text'] = LED_MASKS[1][2]
           else:
             response['color'] = i3s_config['color_bad']
-
-          response['full_text'] = LED_MASKS[1][2]
+            response['full_text'] = LED_MASKS[1][0]
 
           response['cached_until'] = time() + 1
-
 
         return response
 
@@ -104,11 +103,11 @@ class Py3status:
           stati = get_led_statuses()
 
           if stati & LED_MASKS[0][1]:
-            response['color'] = i3s_config['color_good']
-          else:
             response['color'] = i3s_config['color_bad']
-
-          response['full_text'] = LED_MASKS[0][2]
+            response['full_text'] = LED_MASKS[0][2]
+          else:
+            response['color'] = i3s_config['color_good']
+            response['full_text'] = LED_MASKS[0][0]
 
           response['cached_until'] = time() + 1
 
