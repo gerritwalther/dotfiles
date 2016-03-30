@@ -6,3 +6,7 @@ export PATH=$PATH:$HOME/opt/dart-protoc-plugin/out
 
 # Add cabal packages to PATH
 export PATH=$PATH:$HOME/.cabal/bin
+
+# Add android to PATH
+export PATH=$PATH:$HOME/opt/android-sdk-linux/tools
+export PATH=$PATH:$HOME/opt/android-sdk-linux/platform-tools
