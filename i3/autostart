@@ -57,4 +57,4 @@ else
 fi
 
 # add possibility to switch between UK and DE layout (https://faq.i3wm.org/question/4761/keyboard-input-language-pro$
-setxkbmap -model pc105 -layout gb,de -option grp:shifts_toggle
+#setxkbmap -model pc105 -layout gb,de -option grp:shifts_toggle
