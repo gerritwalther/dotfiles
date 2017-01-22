@@ -1,25 +1,25 @@
 # assign workspaces to screen
-workspace $tag1 output VGA1
-workspace $tag2 output VGA1
-workspace $tag3 output VGA1
-workspace $tag4 output VGA1
-workspace $tag5 output VGA1
-workspace $tag6 output eDP1
-workspace $tag7 output eDP1
-workspace $tag8 output eDP1
-workspace $tag9 output eDP1
-workspace $tag0 output eDP1
+workspace $tag1 output DFP1
+workspace $tag2 output DFP1
+workspace $tag3 output DFP1
+workspace $tag4 output DFP1
+workspace $tag5 output DFP1
+workspace $tag6 output DFP5
+workspace $tag7 output DFP5
+workspace $tag8 output DFP5
+workspace $tag9 output DFP5
+workspace $tag0 output DFP5
 
-workspace $tagF1 output VGA1
-workspace $tagF2 output VGA1
-workspace $tagF3 output VGA1
-workspace $tagF4 output VGA1
-workspace $tagF5 output VGA1
-workspace $tagF6 output eDP1
-workspace $tagF7 output eDP1
-workspace $tagF8 output eDP1
-workspace $tagF9 output eDP1
-workspace $tagF10 output eDP1
+workspace $tagF1 output DFP1
+workspace $tagF2 output DFP1
+workspace $tagF3 output DFP1
+workspace $tagF4 output DFP1
+workspace $tagF5 output DFP1
+workspace $tagF6 output DFP5
+workspace $tagF7 output DFP5
+workspace $tagF8 output DFP5
+workspace $tagF9 output DFP5
+workspace $tagF10 output DFP5
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -45,5 +45,5 @@ bar {
         # workspace_buttons     yes/no
         tray_output             primary
         # Using custom i3status.conf with py3status
-        status_command          py3status -c ~/.i3/bar/i3status_work.conf -i ~/.i3/py3status
+        status_command          py3status -c ~/.i3/bar/i3status_work2.conf -i ~/.i3/py3status
 }

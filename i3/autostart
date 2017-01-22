@@ -29,7 +29,7 @@ dunst &
 ## Setup montiors for work
 if [ "$HOST" == "home" ] ; then
   xrandr --output HDMI-0 --auto --primary
-  xrandr --output DVI-1 --auto --left-of HDMI-0
+  xrandr --output DVI-1 --auto --right-of HDMI-0
 elif [ "$HOST" == "work" ] ; then
   xrandr --output eDP1 --auto --primary
   xrandr --output VGA1 --auto --right-of eDP1
@@ -55,3 +55,6 @@ if hash workrave 2>/dev/null; then
 else
   echo "Workrave is not installed."
 fi
+
+# add possibility to switch between UK and DE layout (https://faq.i3wm.org/question/4761/keyboard-input-language-pro$
+#setxkbmap -model pc105 -layout gb,de -option grp:shifts_toggle

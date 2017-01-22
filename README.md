@@ -12,6 +12,7 @@ install with `apt-get install`:
 * numlockx (used by the i3-configs)
 * xautolock (required for autolock)
 * libnotify-bin (required for autolock)
+* xkblayout-state (required to show the current layout: https://github.com/nonpop/xkblayout-state)
 
 install with `easy_install`:
 * pip
