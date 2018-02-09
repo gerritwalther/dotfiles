@@ -1,4 +1,17 @@
 export PATH=$PATH:/opt/Qt5/Tools/QtCreator/bin:/opt/Qt5/5.4/gcc_64/bin
 
-export PATH=$PATH:/home/walther/opt/ghc/bin
-export PATH=$PATH:/home/walther/.cabal/bin
+export PATH=$PATH:$HOME/opt/ghc/bin
+export PATH=$PATH:$HOME/.cabal/bin
+
+export GOPATH=$HOME/opt/go
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+
+# Add virtual environment variables for python
+VENV_VERSION=15.1.0
+VENV_BASE_PATH=$HOME/lib/python2.7
+VENV_BASE_PY3_PATH=$HOME/lib/python3
+VENV_BOOTSTRAP_PATH=${VENV_BASE_PATH}/bootstrap
+VENV_BOOTSTRAP_PY3_PATH=${VENV_BASE_PY3_PATH}/bootstrap
+VENV_COYO_PATH=${VENV_BASE_PATH}/coyo
+VENV_COYO_PY3_PATH=${VENV_BASE_PY3_PATH}/coyo-srs
+VENV_AD_TEST_PATH=${VENV_BASE_PY3_PATH}/coyo-ad-test
