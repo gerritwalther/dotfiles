@@ -10,3 +10,19 @@ set_title() {
 function mkdircd() {
   mkdir -p "$@" && eval cd "\"\$$#\"";
 }
+
+# Add some functions:
+# http://qr.ae/TUIjb7
+
+# Move up x folders, where x is the parameter or by default 1
+function up() {
+  if [ $# -eq 0 ]; then
+    times=1
+  else
+    times=$1
+  fi
+  while [ "$times" -gt "0" ]; do
+    cd ..
+    times=$(($times - 1))
+  done
+}
