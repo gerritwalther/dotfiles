@@ -26,3 +26,8 @@ function up() {
     times=$(($times - 1))
   done
 }
+
+# Get current weather for current location or specified location
+weather(){
+  curl -s "wttr.in/$1?m1"
+}
