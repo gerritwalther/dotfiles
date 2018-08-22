@@ -9,3 +9,5 @@
 #[user]
 #    email = <mailadresse>
 #    name = <name>
+[core]
+	autocrlf = input

@@ -29,3 +29,7 @@ if [ -z "$SSH_TTY" ] ; then                     # if not using ssh
     fi
   fi
 fi
+
+if [ -f ~/opt/elixir_auto_complete/all_elixir_auto_complete.bash ]; then
+  source ~/opt/elixir_auto_complete/all_elixir_auto_complete.bash
+fi
