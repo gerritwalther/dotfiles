@@ -1,7 +1,8 @@
 [global_config]
   enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
 [keybindings]
-  edit_tab_title = <Primary><Alt>a
+  edit_tab_title = None
+  hide_window = None
 [layouts]
   [[default]]
     [[[child1]]]
