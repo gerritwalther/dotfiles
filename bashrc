@@ -3,7 +3,7 @@
 # for examples
 
 # set default file mode to rwx for owner and --- for group members or others
-umask 0077
+umask 0022
 
 # If not running interactively, don't do anything
 case $- in
