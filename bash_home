@@ -1,5 +1,6 @@
 # Add dart executables to PATH
 export PATH=$PATH:/usr/lib/dart/bin
+export PATH=$PATH:$HOME/.pub-cache/bin
 
 # Add dart protobuf plugin to PATH
 export PATH=$PATH:$HOME/opt/dart-protoc-plugin/out
