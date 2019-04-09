@@ -133,3 +133,7 @@ fi
 
 # Add bin folder in home path to the PATH variable
 export PATH=$PATH:$HOME/bin
+
+if [ -f $HOME/.bash_git ]; then
+    source $HOME/.bash_git
+fi
