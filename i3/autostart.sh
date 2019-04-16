@@ -31,8 +31,8 @@ if [ "$HOST" == "home" ] ; then
   xrandr --output HDMI-0 --auto --primary
   xrandr --output DVI-1 --auto --right-of HDMI-0
 elif [ "$HOST" == "work" ] ; then
-  xrandr --output eDP1 --auto --primary
-  xrandr --output VGA1 --auto --right-of eDP1
+  xrandr --output eDP1 --auto
+  xrandr --output HDMI2 --auto --left-of eDP1 --primary
 fi
 
 ## Always activate num-lock.
